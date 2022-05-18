@@ -72,7 +72,7 @@ classifier D (user='Alice', query_type in ('insert','select', 'ctas')）
 创建资源组并设置相应分离器。
 
 ```SQL
-CREAE RESOURCE GROUP <name> 
+CREATE RESOURCE GROUP <name> 
 TO CLASSIFIER[,...] --创建分类器，语法见下方。多个分类器间用英文逗号（,）分隔。
 WITH (
     "cpu_core_limit" = "n",
@@ -190,7 +190,7 @@ ALTER RESOURCE GROUP rg1 DROP ALL;
 
 通过以下方法删除资源组。
 
-```Nginx
+```SQL
 DROP RESOURCE GROUP <NAME>;
 ```
 
