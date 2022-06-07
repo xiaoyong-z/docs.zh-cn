@@ -84,6 +84,8 @@ auth_option: {
     CREATE USER jack@'172.10.1.10' IDENTIFIED WITH authentication_ldap_simple;
     ```
 
+    > 同一个用户（user_identity）只能使用一种认证方式
+
 5. 创建一个 ldap 认证的用户，并指定用户在 ldap 中的 DN(Distinguished Name)。
 
     ```sql
