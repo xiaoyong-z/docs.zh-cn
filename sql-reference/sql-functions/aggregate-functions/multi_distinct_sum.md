@@ -1,8 +1,8 @@
-# MULTI_DISTINCT_SUM
+# multi_distinct_sum
 
 ## 功能
 
-返回 expr 中去除重复值后的总和，功能等同于sum(distinct expr)。
+返回 `expr` 中去除重复值后的总和，功能等同于 sum(distinct expr)。
 
 ## 语法
 
@@ -12,7 +12,7 @@ multi_distinct_sum(expr)
 
 ## 参数说明
 
-`epxr`: 用于指定参与运算的列。列值可以为 TINYINT，SMALLINT，INT，LARGEINT, FLOAT，DOUBLE，或DECIMAL 类型。
+`epxr`: 用于指定参与运算的列。列值可以为 TINYINT，SMALLINT，INT，LARGEINT, FLOAT，DOUBLE，或 DECIMAL 类型。
 
 ## 返回值说明
 
@@ -34,8 +34,8 @@ multi_distinct_sum(expr)
 ## 示例
 
 ```plain text
-创建一张表，该表只有一个int域
-MySQL > CREATE TABLE tabl
+-- 创建一张表，该表只有一个 int 域。
+CREATE TABLE tabl
 (k0 BIGINT NOT NULL) ENGINE=OLAP
 DUPLICATE KEY(`k0`)
 COMMENT "OLAP"
@@ -47,11 +47,11 @@ PROPERTIES(
 );
 Query OK, 0 rows affected (0.01 sec)
 
-插入值0,1,1,1,2,2
+-- 插入值 0,1,1,1,2,2。
 MySQL > INSERT INTO tabl VALUES ('0'), ('1'), ('1'), ('1'), ('2'), ('2');
 Query OK, 6 rows affected (0.15 sec)
 
-k0的值去除重复后为0,1,2,将其相加得到3
+-- k0 的值去除重复后为 0,1,2, 将其相加得到 3。
 MySQL > select multi_distinct_sum(k0) from tabl;
 +------------------------+
 | multi_distinct_sum(k0) |
