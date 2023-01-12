@@ -15,6 +15,7 @@ EXPORT TABLE table_name
 TO export_path
 [opt_properties]
 WITH BROKER
+[broker_properties]
 ```
 
 ## 参数说明
@@ -24,6 +25,8 @@ WITH BROKER
 - `column_name`：要导出的列。列的导出顺序可以和源表结构 (schema) 不同，如不指定则默认导出表中所有列的数据。
 - `export_path`：导出的路径。如果是目录，需要以斜杠结尾。否则最后一个斜杠的后面部分会作为导出文件的前缀。如不指定文件名前缀，文件名前缀默认为 **data_**。
 - `opt_properties`：导出相关的属性配置。
+- `broker_properties`: 用于提供访问数据源的鉴权信息。数据源不同，需要提供的鉴权信息也不同（参考broker load)。
+
 
     语法：
 
