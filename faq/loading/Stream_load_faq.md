@@ -32,7 +32,7 @@ StarRocks 支持在导入过程中进行数据转换，具体请参见[导入过
 
 请参见[导入通用常见问题](/faq/loading/Loading_faq.md)。
 
-## 5. 导入出错 "body exceed max size: 10737418240, limit: 10737418240"。
+## 5. 导入出错 "body exceed max size: 10737418240, limit: 10737418240" 应该如何解决？
 
 导入文件大小超过 10GB, 超过 Stream Load 所能支持的文件大小上限。有两种解决方法:
 
